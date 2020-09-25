@@ -7,10 +7,14 @@
 <div>
   <h3>Filter posts:</h3>
   <%= form_tag("/posts", method: "get") do %>
+<<<<<<< HEAD
     <%= select_tag "author", options_from_collection_for_select(@authors, "id", "name"), include_blank: true %>
     
     <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
     
+=======
+    <%= select_tag "author", options_from_collection_for_select(Author.all, "id", "name"), include_blank: true %>
+>>>>>>> 2d3946419f990a2fc7ff39b367c77bbf07b58e95
     <%= submit_tag "Filter" %>
   <% end %>
 </div>
